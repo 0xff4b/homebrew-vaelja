@@ -491,7 +491,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 try launchctl(["bootout", userDomain, launchAgentURL.path])
                 try FileManager.default.removeItem(at: launchAgentURL)
             } else {
-                let execPath = (CommandLine.arguments[0] as NSString).resolvingSymlinksInPath
+                let rawPath = CommandLine.arguments[0]
+                let execPath: String
+                if rawPath.hasPrefix("/") {
+                    execPath = (rawPath as NSString).resolvingSymlinksInPath
+                } else {
+                    let which = Process()
+                    which.launchPath = "/usr/bin/which"
+                    which.arguments = [rawPath]
+                    let whichPipe = Pipe()
+                    which.standardOutput = whichPipe
+                    try which.run()
+                    which.waitUntilExit()
+                    let resolved = String(data: whichPipe.fileHandleForReading.readDataToEndOfFile(), encoding: .utf8)?
+                        .trimmingCharacters(in: .whitespacesAndNewlines) ?? rawPath
+                    execPath = (resolved as NSString).resolvingSymlinksInPath
+                }
                 let plist: [String: Any] = [
                     "Label": "com.vaelja",
                     "ProgramArguments": [execPath],
