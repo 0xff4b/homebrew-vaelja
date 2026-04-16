@@ -5,7 +5,6 @@ class Vaelja < Formula
   sha256 "REPLACE_WITH_SHA256_AFTER_TAGGING"
   license "MIT"
 
-  depends_on xcode: ["14.0", :build]
   depends_on macos: :ventura
 
   def install
