@@ -1,8 +1,8 @@
 class Vaelja < Formula
   desc "Simple, PowerToys-inspired color picker for macOS"
   homepage "https://github.com/0xff4b/homebrew-vaelja"
-  url "https://github.com/0xff4b/homebrew-vaelja/archive/refs/tags/v1.0.4.tar.gz"
-  sha256 "08dd393c0c3de5aa03842a88520f063de4723991a4667aa98c672996e0c66b49"
+  url "https://github.com/0xff4b/homebrew-vaelja/archive/refs/tags/v1.0.6.tar.gz"
+  sha256 "b4e276b6e07b8cb51be05fc7bd68004bb8f5be1337a442469b0d4066a72b7433"
   license "MIT"
 
   depends_on macos: :ventura
