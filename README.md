@@ -4,7 +4,11 @@
 
 The minimal, PowerToys-inspired color picker that macOS deserves. Simple UI, copies directly to your clipboard.
 
+<div align="center">
+
 ![vaelja in action](screenshots/cursor.gif)
+
+</div>
 
 ## Install
 
@@ -28,8 +32,8 @@ brew install 0xff4b/vaelja/vaelja
 - Access color history and change the shortcut from the menu bar icon
 
 <div style="display: flex; gap: 8px;">
-  <img src="screenshots/menu.webp" alt="Menu bar icon" style="width: 50%;" />
-  <img src="screenshots/history.webp" alt="Color history" style="width: 50%;" />
+  <img src="screenshots/menu.webp" alt="Menu bar icon" style="width: 49%; height: 400px; object-fit: cover;" />
+  <img src="screenshots/history.webp" alt="Color history" style="width: 49%; height: 400px; object-fit: cover;" />
 </div>
 
 ## Requirements
