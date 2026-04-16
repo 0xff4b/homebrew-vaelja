@@ -2,7 +2,7 @@ class Vaelja < Formula
   desc "Simple, PowerToys-inspired color picker for macOS"
   homepage "https://github.com/0xff4b/vaelja"
   url "https://github.com/0xff4b/vaelja/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "40121a3febcfe70e66560fdee997326ba62569d9be27c818fa0c81afecc1b168"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
   license "MIT"
 
   depends_on macos: :ventura
