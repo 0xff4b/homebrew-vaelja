@@ -8,7 +8,7 @@ class Vaelja < Formula
   depends_on macos: :ventura
 
   def install
-    system "make", "install", "PREFIX=#{prefix}"
+    system "make", "install", "PREFIX=#{bin}"
   end
 
   def caveats
