@@ -11,6 +11,7 @@ The minimal, PowerToys-inspired color picker that macOS deserves. Simple UI, cop
 </div>
 
 ## Install
+This app is installed using [Homebrew](https://brew.sh/).
 
 ```sh
 brew tap 0xff4b/vaelja
